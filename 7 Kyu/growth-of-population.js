@@ -25,9 +25,8 @@
 // Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
 
 function nbYear(p0, percent, aug, p){
-    let years = 0;
-    for (let i = years; p0 < p; years++){
-      p0 += p0 * (percent / 100) + aug;
-    }
-    return years;
+  for(var years = 0; p0 < p; years++){
+    p0 += p0 * percent / 100 + aug | 0;
+  }
+  return years;
 }
