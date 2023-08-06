@@ -7,3 +7,8 @@ function moveZeros(arr) {
   let arrRemain = arr.filter((n) => n !== 0);
   return arrRemain.concat(arrZero); 
 }
+
+// OR:
+function moveZeros(arr) {
+    return arr.filter(function(x) {return x !== 0}).concat(arr.filter(function(x) {return x === 0;}));
+}
