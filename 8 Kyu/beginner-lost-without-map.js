@@ -7,3 +7,7 @@
 function maps(x) {
   return x.map((el) => el * 2);
 }
+
+// OR:
+
+const maps = x => x.map((el) => el * 2);
