@@ -16,7 +16,6 @@
 // Output: "Pls go away and stop eating my sheep"
 
 function warnTheSheep(queue) {
-  let location;
-  queue.forEach((x, i) => {x == 'wolf' ? location = queue.length - i : 0});
-  return location == 1 ? "Pls go away and stop eating my sheep" : `Oi! Sheep number ${location - 1}! You are about to be eaten by a wolf!`; 
+  const position = queue.reverse().indexOf('wolf');
+  return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
 }
